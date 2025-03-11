@@ -10,52 +10,63 @@
 
 <body>
     <header>
-        <h1>Web Bán Hàng</h1>
-        <a href="cart.html">🛒 Giỏ hàng (<span id="cart-count">0</span>)</a>
+        <div class="header-container">
+            <h1>Web Bán Hàng</h1>
+            <nav>
+                <a href="cart.html">🛒 Giỏ hàng (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="filters">
-        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-        <label for="categoryFilter">Danh mục:</label>
-        <select id="categoryFilter">
-            <option value="all">Tất cả</option>
-            <option value="electronics">Điện tử</option>
-            <option value="fashion">Thời trang</option>
-        </select>
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm sản phẩm...">
+        <div class="filters">
+            <div class="filter-group">
+                <label for="categoryFilter">Danh mục:</label>
+                <select id="categoryFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="electronics">Điện tử</option>
+                    <option value="fashion">Thời trang</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="priceFilter">Lọc giá:</label>
+                <select id="priceFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="low">Dưới 100,000 VND</option>
+                    <option value="medium">100,000 - 500,000 VND</option>
+                    <option value="high">Trên 500,000 VND</option>
+                </select>
+            </div>
+        </div>
+    </section>
 
-        <label for="priceFilter">Lọc giá:</label>
-        <select id="priceFilter">
-            <option value="all">Tất cả</option>
-            <option value="low">Dưới 100,000 VND</option>
-            <option value="medium">100,000 - 500,000 VND</option>
-            <option value="high">Trên 500,000 VND</option>
-        </select>
-    </div>
-
+    <!-- Loading Spinner -->
     <div class="loading-spinner" id="loadingSpinner"></div>
 
-    <div class="product-list" id="productList">
+    <section class="product-list" id="productList">
+        <!-- Các sản phẩm được hiển thị dưới dạng card -->
         <div class="product" data-id="1" data-name="Tai nghe" data-price="200000" data-category="electronics">
             <img src="images/product1.jpg" alt="Tai nghe">
             <h2>Tai nghe</h2>
-            <p>Giá: 200,000 VND</p>
+            <p class="price">200,000 VND</p>
             <button class="add-to-cart">Thêm vào giỏ</button>
         </div>
 
         <div class="product" data-id="2" data-name="Áo thun" data-price="150000" data-category="fashion">
             <img src="images/product2.jpg" alt="Áo thun">
             <h2>Áo thun</h2>
-            <p>Giá: 150,000 VND</p>
+            <p class="price">150,000 VND</p>
             <button class="add-to-cart">Thêm vào giỏ</button>
         </div>
 
         <div class="product" data-id="3" data-name="Laptop" data-price="1000000" data-category="electronics">
             <img src="images/product3.jpg" alt="Laptop">
             <h2>Laptop</h2>
-            <p>Giá: 1,000,000 VND</p>
+            <p class="price">1,000,000 VND</p>
             <button class="add-to-cart">Thêm vào giỏ</button>
         </div>
-    </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

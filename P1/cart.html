@@ -10,15 +10,39 @@
 
 <body>
     <header>
-        <h1>Giỏ Hàng</h1>
-        <a href="index.html">⬅ Quay lại mua hàng</a>
+        <div class="header-container">
+            <h1>Giỏ Hàng</h1>
+            <nav>
+                <a href="index.html">⬅ Quay lại mua hàng</a>
+            </nav>
+        </div>
     </header>
 
-    <div id="cart-items"></div>
-    <h2>Tổng tiền: <span id="total-price">0</span> VND</h2>
-    <button id="clear-cart">Xóa tất cả</button>
+    <main class="cart-container">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Các mục giỏ hàng được chèn vào đây -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <p id="totalPrice">Tổng tiền: 0 VND</p>
+            <div class="cart-actions">
+                <button id="clear-cart" class="clear-cart-btn">Xóa tất cả</button>
+                <button id="checkout" class="checkout-btn">Thanh toán</button>
+            </div>
+        </div>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 
 </html>
